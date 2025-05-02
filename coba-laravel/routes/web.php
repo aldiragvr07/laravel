@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -81,3 +81,4 @@ Route::get('dashboard', function() {
     return view('dashboard.index');
 })->middleware('auth');
 
+Route::resource('dashboard/posts', DashboardPostController::class)->middleware('auth');
