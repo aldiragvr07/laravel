@@ -11,7 +11,7 @@
           <a class="nav-link dropdown-item  {{ Request::is('dashboard') ? 'active' : '' }}"href="/dashboard" aria-current="page"><i class="fas fa-fire "></i><span> Dashboard</span></a>
         </li>
         <li>
-          <a class="nav-link dropdown-item {{ Request::is('dashboard/posts') ? 'active' : '' }} " href="/dashboard/posts" ><i class="fas fa-file-alt"></i> <span> My Posts</span></a>
+          <a class="nav-link dropdown-item {{ Request::is('dashboard/posts*') ? 'active' : '' }} " href="/dashboard/posts" ><i class="fas fa-file-alt"></i> <span> My Posts</span></a>
         </li>
         
         <a class="dropdown-item has-icon text-danger">

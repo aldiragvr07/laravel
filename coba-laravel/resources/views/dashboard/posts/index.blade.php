@@ -6,11 +6,9 @@
 </div>
 <div class="table-responsive col-lg-12">
     <div class="card">
-      <div class="card-header">
-        <h4>Invoices</h4>
-        <div class="card-header-action">
-          <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
-        </div>
+      <div class="card-header mt-3">
+        <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create New Post</a>
+
       </div>
       <div class="card-body p-0">
         <div class="table-responsive table-invoice">
