@@ -28,8 +28,16 @@
 
   gtag('config', 'UA-94034622-3');
 </script>
-<!-- /END GA --></head>
+{{-- Trix Editor --}}
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+  <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 
+<style>
+    trix-toolbar [data-trix-button-group="file-tools"] {
+        display: none;
+}
+</style>
+<!-- /END GA --></head>
 <body>
 <div class="main-wrapper main-wrapper-1">
     @include('dashboard.layouts.header')
