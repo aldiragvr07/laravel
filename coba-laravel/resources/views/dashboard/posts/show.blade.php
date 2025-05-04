@@ -12,8 +12,15 @@
                         @method('delete')
                         @csrf
                         <button type="submit" class="btn btn-danger " onclick="return confirm('Are you sure?')"><i class="fas fa-trash"> Delete</i></button>
-                      </form>   
-                    <img src="https://picsum.photos/id/{{ $post->id }}/1200/400" class="img-fluid mt-3" alt="{{ $post->category->name }}">
+                      </form>
+                      
+                @if ($post->image)
+                <div style="max-height:350px; overflow:hidden">
+                        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid mt-3" alt="{{ $post->category->name }}">
+                </div>
+                      @else
+                      <img src="https://picsum.photos/id/{{ $post->id }}/1200/400" class="img-fluid mt-3" alt="{{ $post->category->name }}">
+                @endif
                     
                     <article class="my-5">
                             {!! $post->body !!}
