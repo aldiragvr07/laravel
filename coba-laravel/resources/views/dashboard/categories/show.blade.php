@@ -7,7 +7,7 @@
                     <h1 class="mb-3">{{ $categories->name }}</h1>
 
                     <a href="/dashboard/categories" class="btn btn-success"><i class="fas fa-arrow-left"></i> Back to all my category</a>
-                    <a href="/dashboard/categories{{ $categories->slug }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a>
+                    <a href="/dashboard/categories/{{ $categories->slug }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a>
                     <form action="/dashboard/categories/{{ $categories->slug }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
